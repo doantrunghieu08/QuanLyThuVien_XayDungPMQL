@@ -52,14 +52,14 @@
             label1 = new Label();
             label2 = new Label();
             panel2 = new Panel();
-            dataGridView1 = new DataGridView();
+            dgvSach = new DataGridView();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel3.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvSach).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -218,6 +218,7 @@
             button4.TabIndex = 18;
             button4.Text = "Thoát";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button1
             // 
@@ -228,6 +229,7 @@
             button1.TabIndex = 15;
             button1.Text = "Thêm ";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
@@ -238,6 +240,7 @@
             button3.TabIndex = 17;
             button3.Text = "Xóa";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -248,6 +251,7 @@
             button2.TabIndex = 16;
             button2.Text = "Sửa";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // panel3
             // 
@@ -295,23 +299,24 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(dataGridView1);
+            panel2.Controls.Add(dgvSach);
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 488);
             panel2.Name = "panel2";
             panel2.Size = new Size(939, 128);
             panel2.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgvSach
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(939, 128);
-            dataGridView1.TabIndex = 0;
+            dgvSach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvSach.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSach.Dock = DockStyle.Fill;
+            dgvSach.Location = new Point(0, 0);
+            dgvSach.Name = "dgvSach";
+            dgvSach.RowHeadersWidth = 51;
+            dgvSach.Size = new Size(939, 128);
+            dgvSach.TabIndex = 0;
+            dgvSach.CellClick += dgvSach_CellClick;
             // 
             // FormSach
             // 
@@ -321,6 +326,7 @@
             Controls.Add(panel1);
             Name = "FormSach";
             Text = "FormSach";
+            Load += FormSach_Load;
             panel1.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
@@ -329,7 +335,7 @@
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvSach).EndInit();
             ResumeLayout(false);
         }
 
@@ -338,7 +344,7 @@
         private Panel panel1;
         private Panel panel3;
         private Panel panel2;
-        private DataGridView dataGridView1;
+        private DataGridView dgvSach;
         private Label label1;
         private TableLayoutPanel tableLayoutPanel1;
         private Label label2;

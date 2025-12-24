@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    internal class NhanVien
+    public class NhanVien : Human
     {
+
     }
 }

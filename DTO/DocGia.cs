@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    internal class DocGia
+    public class DocGia:Human
     {
     }
 }

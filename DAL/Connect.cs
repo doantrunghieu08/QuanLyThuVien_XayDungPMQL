@@ -5,7 +5,7 @@ namespace DTO
 {
     public class Connect
     {
-        SqlConnection conn = new SqlConnection("Data Source=TrungHieu\\SQLEXPRESS;Initial Catalog=QLKQ_HieuDT_3725;Integrated Security=True;Encrypt=False");
+        SqlConnection conn = new SqlConnection("Data Source=TrungHieu\\SQLEXPRESS;Initial Catalog=QLTV_HieuDT_3725_LTMT5;User ID=sa;Password=1234567890;Encrypt=False");
         SqlCommand cmd = new SqlCommand();
         public DataTable loadData(string sql)
         {
