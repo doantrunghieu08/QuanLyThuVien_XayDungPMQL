@@ -280,6 +280,7 @@
             button4.TabIndex = 18;
             button4.Text = "Thoát";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button1
             // 
@@ -290,6 +291,7 @@
             button1.TabIndex = 15;
             button1.Text = "Thêm ";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
@@ -300,6 +302,7 @@
             button3.TabIndex = 17;
             button3.Text = "Xóa";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -310,6 +313,7 @@
             button2.TabIndex = 16;
             button2.Text = "Sửa";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // panel3
             // 
@@ -330,6 +334,7 @@
             dgvMuonTra.RowHeadersWidth = 51;
             dgvMuonTra.Size = new Size(1079, 180);
             dgvMuonTra.TabIndex = 3;
+            dgvMuonTra.CellClick += dgvMuonTra_CellClick;
             // 
             // panel2
             // 
@@ -421,12 +426,12 @@
         private Label label7;
         private Label label6;
         private Label label8;
-        private TextBox txtMaMuonTra;
         private ComboBox cbbMaNhanVien;
         private ComboBox cbbMaDocGia;
         private TextBox txtTienCoc;
         private DateTimePicker dTPNgayMuon;
         private DateTimePicker dTPNgayTra;
         private Panel panel5;
+        public TextBox txtMaMuonTra;
     }
 }

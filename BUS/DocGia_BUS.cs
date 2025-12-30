@@ -22,5 +22,13 @@ namespace BUS
         {
             docGia_DAL.InsertDocGia(ob);
         }
+        public void UpdateDocGia(string maDocGia, DocGia ob)
+        {
+            docGia_DAL.UpdateDocGia(maDocGia, ob);
+        }
+        public void DeleteDocGia(string maDocGia)
+        {
+            docGia_DAL.DeleteDocGia(maDocGia);
+        }
     }
 }

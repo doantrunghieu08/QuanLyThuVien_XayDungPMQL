@@ -89,6 +89,7 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(1076, 275);
             panel4.TabIndex = 17;
+            panel4.Paint += panel4_Paint;
             // 
             // txtMaDocGia
             // 
@@ -198,6 +199,7 @@
             button4.TabIndex = 18;
             button4.Text = "Thoát";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button1
             // 
@@ -208,6 +210,7 @@
             button1.TabIndex = 15;
             button1.Text = "Thêm ";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
@@ -218,6 +221,7 @@
             button3.TabIndex = 17;
             button3.Text = "Xóa";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -228,6 +232,7 @@
             button2.TabIndex = 16;
             button2.Text = "Sửa";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // panel3
             // 
@@ -248,6 +253,7 @@
             dgvDocGia.RowHeadersWidth = 51;
             dgvDocGia.Size = new Size(1076, 214);
             dgvDocGia.TabIndex = 2;
+            dgvDocGia.CellClick += dgvDocGia_CellClick;
             // 
             // panel2
             // 
@@ -301,6 +307,7 @@
             Controls.Add(panel1);
             Name = "FormDocGia";
             Text = "FormDocGia";
+            Load += FormDocGia_Load;
             panel1.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();

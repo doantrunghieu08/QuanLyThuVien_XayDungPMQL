@@ -3677,13 +3677,25 @@ SELECT MaNhanVien_HieuDT_3725_LTMT5, TenNhanVien_HieuDT_3725_LTMT5, SoDienThoai_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT MaNhanVien_HieuDT_3725_LTMT5, TenNhanVien_HieuDT_3725_LTMT5, SoDienThoai_H" +
                 "ieuDT_3725_LTMT5, Email_HieuDT_3725_LTMT5, DiaChi_HieuDT_3725_LTMT5 FROM dbo.Nha" +
                 "nVien_HieuDT_3725_LTMT5";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"INSERT INTO NhanVien_HieuDT_3725_LTMT5
+                  (TenNhanVien_HieuDT_3725_LTMT5, SoDienThoai_HieuDT_3725_LTMT5, Email_HieuDT_3725_LTMT5, DiaChi_HieuDT_3725_LTMT5)
+VALUES (@TenNhanVien_HieuDT_3725_LTMT5,@SoDienThoai_HieuDT_3725_LTMT5,@Email_HieuDT_3725_LTMT5,@DiaChi_HieuDT_3725_LTMT5); 
+SELECT MaNhanVien_HieuDT_3725_LTMT5, TenNhanVien_HieuDT_3725_LTMT5, SoDienThoai_HieuDT_3725_LTMT5, Email_HieuDT_3725_LTMT5, DiaChi_HieuDT_3725_LTMT5 FROM NhanVien_HieuDT_3725_LTMT5 WHERE (MaNhanVien_HieuDT_3725_LTMT5 = @MaNhanVien_HieuDT_3725_LTMT5)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TenNhanVien_HieuDT_3725_LTMT5", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "TenNhanVien_HieuDT_3725_LTMT5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SoDienThoai_HieuDT_3725_LTMT5", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "SoDienThoai_HieuDT_3725_LTMT5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email_HieuDT_3725_LTMT5", global::System.Data.SqlDbType.NChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Email_HieuDT_3725_LTMT5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DiaChi_HieuDT_3725_LTMT5", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "DiaChi_HieuDT_3725_LTMT5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaNhanVien_HieuDT_3725_LTMT5", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "MaNhanVien_HieuDT_3725_LTMT5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3928,6 +3940,59 @@ SELECT MaNhanVien_HieuDT_3725_LTMT5, TenNhanVien_HieuDT_3725_LTMT5, SoDienThoai_
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string TenNhanVien_HieuDT_3725_LTMT5, string SoDienThoai_HieuDT_3725_LTMT5, string Email_HieuDT_3725_LTMT5, string DiaChi_HieuDT_3725_LTMT5, string Original_MaNhanVien_HieuDT_3725_LTMT5, string Original_TenNhanVien_HieuDT_3725_LTMT5, string Original_SoDienThoai_HieuDT_3725_LTMT5, string Original_Email_HieuDT_3725_LTMT5, string Original_DiaChi_HieuDT_3725_LTMT5) {
             return this.Update(Original_MaNhanVien_HieuDT_3725_LTMT5, TenNhanVien_HieuDT_3725_LTMT5, SoDienThoai_HieuDT_3725_LTMT5, Email_HieuDT_3725_LTMT5, DiaChi_HieuDT_3725_LTMT5, Original_MaNhanVien_HieuDT_3725_LTMT5, Original_TenNhanVien_HieuDT_3725_LTMT5, Original_SoDienThoai_HieuDT_3725_LTMT5, Original_Email_HieuDT_3725_LTMT5, Original_DiaChi_HieuDT_3725_LTMT5);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertQuery(string TenNhanVien_HieuDT_3725_LTMT5, string SoDienThoai_HieuDT_3725_LTMT5, string Email_HieuDT_3725_LTMT5, string DiaChi_HieuDT_3725_LTMT5, string MaNhanVien_HieuDT_3725_LTMT5) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((TenNhanVien_HieuDT_3725_LTMT5 == null)) {
+                throw new global::System.ArgumentNullException("TenNhanVien_HieuDT_3725_LTMT5");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(TenNhanVien_HieuDT_3725_LTMT5));
+            }
+            if ((SoDienThoai_HieuDT_3725_LTMT5 == null)) {
+                throw new global::System.ArgumentNullException("SoDienThoai_HieuDT_3725_LTMT5");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(SoDienThoai_HieuDT_3725_LTMT5));
+            }
+            if ((Email_HieuDT_3725_LTMT5 == null)) {
+                throw new global::System.ArgumentNullException("Email_HieuDT_3725_LTMT5");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Email_HieuDT_3725_LTMT5));
+            }
+            if ((DiaChi_HieuDT_3725_LTMT5 == null)) {
+                throw new global::System.ArgumentNullException("DiaChi_HieuDT_3725_LTMT5");
+            }
+            else {
+                command.Parameters[3].Value = ((string)(DiaChi_HieuDT_3725_LTMT5));
+            }
+            if ((MaNhanVien_HieuDT_3725_LTMT5 == null)) {
+                throw new global::System.ArgumentNullException("MaNhanVien_HieuDT_3725_LTMT5");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(MaNhanVien_HieuDT_3725_LTMT5));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

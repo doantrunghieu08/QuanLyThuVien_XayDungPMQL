@@ -39,6 +39,23 @@ VALUES (@TenDocGia_HieuDT_3725_LTMT5,@SoDienThoai_HieuDT_3725_LTMT5,@Email_HieuD
 WHERE  (MaDocGia_HieuDT_3725_LTMT5 = @Original_MaDocGia_HieuDT_3725_LTMT5)
             ");
             cmd.Parameters.AddWithValue("@Original_MaDocGia_HieuDT_3725_LTMT5", maDocGia);
+            ExcuteNonQuery(cmd) ;
+        }
+
+        public void UpdateDocGia(string maDocGia, DocGia ob)
+        {
+            SqlCommand cmd = new SqlCommand(@"
+                UPDATE DocGia_HieuDT_3725_LTMT5
+SET          TenDocGia_HieuDT_3725_LTMT5 = @TenDocGia_HieuDT_3725_LTMT5, SoDienThoai_HieuDT_3725_LTMT5 = @SoDienThoai_HieuDT_3725_LTMT5, Email_HieuDT_3725_LTMT5 = @Email_HieuDT_3725_LTMT5, 
+                  DiaChi_HieuDT_3725_LTMT5 = @DiaChi_HieuDT_3725_LTMT5
+WHERE  (MaDocGia_HieuDT_3725_LTMT5 = @Original_MaDocGia_HieuDT_3725_LTMT5)
+            ");
+            cmd.Parameters.AddWithValue("@TenDocGia_HieuDT_3725_LTMT5", ob.Name);
+            cmd.Parameters.AddWithValue("@SoDienThoai_HieuDT_3725_LTMT5", ob.SDT);
+            cmd.Parameters.AddWithValue("@Email_HieuDT_3725_LTMT5", ob.email);
+            cmd.Parameters.AddWithValue("@DiaChi_HieuDT_3725_LTMT5", ob.diaChi);
+            cmd.Parameters.AddWithValue("@Original_MaDocGia_HieuDT_3725_LTMT5", maDocGia);
+            ExcuteNonQuery(cmd);
         }
 
 

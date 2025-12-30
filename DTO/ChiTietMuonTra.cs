@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    internal class ChiTietMuonTra
+    public class ChiTietMuonTra
     {
+        public string maMuonTra { get; set; }
+
+        public string maSach {  get; set; }
+
+        public DateTime ngayTra { get; set; }
+
+        public int tienPhat { get; set; }
+
+        public string ghiChu {  get; set; }
     }
 }

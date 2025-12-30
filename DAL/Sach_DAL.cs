@@ -42,7 +42,7 @@ WHERE  (MaSach_HieuDT_3725_LTMT5 = @Original_MaSach_HieuDT_3725_LTMT5)");
                 UPDATE Sach_HieuDT_3725_LTMT5
 SET          TenSach_HieuDT_3725_LTMT5 = @TenSach_HieuDT_3725_LTMT5, NhaXuatBan_HieuDT_3725_LTMT5 = @NhaXuatBan_HieuDT_3725_LTMT5, TheLoai_HieuDT_3725_LTMT5 = @TheLoai_HieuDT_3725_LTMT5, 
                   TacGia_HieuDT_3725_LTMT5 = @TacGia_HieuDT_3725_LTMT5, NamXuatBan_HieuDT_3725_LTMT5 = @NamXuatBan_HieuDT_3725_LTMT5
-WHERE  (MaSach_HieuDT_3725_LTMT5 = @Original_MaSach_HieuDT_3725_LTMT5
+WHERE  (MaSach_HieuDT_3725_LTMT5 = @Original_MaSach_HieuDT_3725_LTMT5)
             ");
             cmd.Parameters.AddWithValue("@TenSach_HieuDT_3725_LTMT5", ob.tenSach);
             cmd.Parameters.AddWithValue("@NhaXuatBan_HieuDT_3725_LTMT5", ob.nhaXuatBan);

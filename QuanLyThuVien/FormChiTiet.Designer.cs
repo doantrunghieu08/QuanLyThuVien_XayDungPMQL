@@ -253,6 +253,7 @@
             button1.TabIndex = 15;
             button1.Text = "Thêm ";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
@@ -263,6 +264,7 @@
             button3.TabIndex = 17;
             button3.Text = "Xóa";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -273,6 +275,7 @@
             button2.TabIndex = 16;
             button2.Text = "Sửa";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // panel4
             // 
